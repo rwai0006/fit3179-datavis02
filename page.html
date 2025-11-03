@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Data Visualization II</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vega@6"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@6"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+    <h1>HOW <img id="TitleLogo" src="F1_white.svg"> CHANGED SPORT</h1>
+    <hr>
+    <p>
+        With its audience leaving, revenue dropping, and races being cancelled, Formula 1 was failing on all fronts, in a steady decline throughout the early 2010s. Yet, in a few short years, it shot up from a somewhat niche, primarily European league, to a global sensation, among the most followed sports on Earth.
+    </p>
+
+    <div id="vis01" class="CenteredVis">
+        <script type="text/javascript">
+            var vis01 = '01_choropleth.json';
+            vegaEmbed('#vis01', vis01);
+        </script>
+    </div>
+
+    <h2>UNPRECEDENTED GROWTH</h2>
+
+    <p>
+        After the struggling franchise was purchased in late 2016 by Liberty Media, its following campaign of audience expansion was immensely successful - and the numbers show. Physical attendance soared from 3.5 million fans across 19 races in 2015 to 6.5 million fans across 24 races in 2024.
+    </p>
+
+    <div id="vis02_1" class="CenteredVis">
+        <script type="text/javascript">
+            var vis02_1 = '02_1_heatmap.json';
+            vegaEmbed('#vis02_1', vis02_1);
+        </script>
+    </div>
+
+    <p>
+        The impact of their strategy is clear in the post-pandemic recovery. After almost no attendance in 2020 due to restrictions, the series rebounded in 2021 and 2022 (the first year circuits were fully open) to the tune of 5.7 million fans, 1.5 million more than pre-pandemic attendance in 2019. Continuing on its upward trajectory, the 2025 season is projected to reach a total attendance of 6.8 million. 
+    </p>
+
+    <div id="vis02_2" class="CenteredVis">
+        <script type="text/javascript">
+            var vis02_2 = '02_2_area.json';
+            vegaEmbed('#vis02_2', vis02_2);
+        </script>
+    </div>
+
+    <p>
+        The popularity of the sport far exceeds its attendance, however, as revealed by the sheer size of its fanbase, showing total brand awareness and cultural reach worldwide, a level of growth that would have been simply unimaginable only years prior. Surpassing 800 million fans, it has become one of, if not the, most followed sport on Earth.
+    </p>
+
+    <div id="vis03" class="CenteredVis">
+        <script type="text/javascript">
+            var vis03 = '03_area.json';
+            vegaEmbed('#vis03', vis03);
+        </script>
+    </div>
+
+    <p>
+        Once cutting costs, dropping yearly races due to unprofitability, and cancelling proposed races for a lack of funds, F1 was now flourishing financially, grossing over double the revenue it was making prior. Media rights now provide over twice the revenue compared to 2017 thanks to a massive influx of new viewership, and with the visibility and attention the sport garnered globally, sponsorship also increased significantly. ‘Other revenue’ , which includes high-margin direct-to-consumer activities like F1 TV subscriptions and event hospitality, has also more than doubled since, establishing strong pricing power and mitigating potential reliance on traditional intermediaries.
+    </p>
+
+    <div id="vis04" class="CenteredVis">
+        <script type="text/javascript">
+            var vis04 = '04_stacked_area.json';
+            vegaEmbed('#vis04', vis04);
+        </script>
+    </div>    
+
+    <p>
+        The magnitude of its newfound success begs but one question - how did they pull it off?
+    </p>
+    <br>
+
+    <h2>A MEDIA REVOLUTION</h2>
+    <p>
+        Arguably F1’s most significant achievement in the past decade is the growth of its digital footprint, establishing the foundational audience necessary to enable financial and attendance expansion.
+    </p>
+
+    <p>
+        A view of the former CEO Bernie Ecclestone came to define Formula 1’s state of decline in the early 2010s - that there was ‘no point’ in pursuing social media or targeting a younger demographic, preferring an older audience, ‘70-year-old(s) with plenty of cash’. Paired with heavy handed restrictions on both filming and sharing events, this cordoned-off, prohibitory approach encapsulates the dying days of the sport’s legacy leadership and the critical blunder it made. 
+    </p>
+
+    <p>
+        Following the Liberty Media acquisition in 2017, previous leadership was out and the floodgates were opened. Restrictions were lifted, and there was an aggressive push not only for proactive digital engagement, but a pivot in the focus of its content, shifting the spotlight from the inherent monotony of results and standings to the personalities on the grid, pioneering an approach to social media making content feel more connected and personable to viewers. Along with additional media such as the ‘Drive To Survive’ Netflix series, this strategy, later imitated by many other sports, connected with a more diverse audience and fuelled massive growth. 
+    </p>
+
+    <div id="vis05" class="CenteredVis">
+        <script type="text/javascript">
+            var vis05 = '05_area.json';
+            vegaEmbed('#vis05', vis05);
+        </script>
+    </div>
+        
+    <p>
+        The audience expanded to 35 million by 2020, positioning F1 as the second fastest-growing sport on social platforms, and by 2024, the total social media audience ballooned to 97 million.
+    </p>
+
+    <h3>US SPOTLIGHT</h3>
+    <p>
+        Historically an elusive audience, the US was traditionally uncharmed by F1 and was a key target for Liberty Media’s expansion of the franchise. Tailoring content for emotional engagement, from social media refactoring to the introduction of the Drive To Survive, the franchise was encapsulated in a format more familiar to American audiences: reality TV. Paired with several new races on US soil spurring massive interest in their respective states, including the $500 million Las Vegas GP, the ‘Drive To Survive Effect’ was profound, taking the sport from a foreign luxury race to among the most talked about events in the nation. 
+    </p>
+
+    <div id="vis06" class="CenteredVis">
+        <script type="text/javascript">
+            var vis06 = '06_choropleth.json';
+            vegaEmbed('#vis06', vis06);
+        </script>
+    </div>
+
+    <div id="vis07" class="CenteredVis">
+        <script type="text/javascript">
+            var vis07 = '07_area.json';
+            vegaEmbed('#vis07', vis07);
+        </script>
+    </div>
+
+    <h3>A DEMOGRAPHIC SHIFT</h3>
+
+    <!--
+    <div id="vis08" class="CenteredVis">
+        <script type="text/javascript">
+            var vis08 = '08_pyramid.json';
+            vegaEmbed('#vis08', vis08);
+        </script>
+    </div>
+    -->
+
+    <p>
+        Positioning drivers as the star of the show, Liberty Media’s strategy takes calculated aim at a younger and more diverse audience, without sacrificing the loyalty among longtime fans. The result:s its fanbase now spans across age, gender and geography more than ever before.
+        This concurs with official F1 figures, showing 42% of the total fanbase is female, and 43% is under 35. 
+    </p>
+
+    <!--
+    <div id="vis09" class="CenteredVis">
+        <script type="text/javascript">
+            var vis09 = '09_ridgeline.json';
+            vegaEmbed('#vis09', vis09);
+        </script>
+    </div>
+
+    <div id="vis10" class="CenteredVis">
+        <script type="text/javascript">
+            var vis10 = '10_donut.json';
+            vegaEmbed('#vis10', vis10);
+        </script>
+    </div>
+    -->
+
+    <p id="conclusion">
+        Almost every major sports league has since commissioned a streaming show attempting to replicate the effect of Drive to Survive. Check their social media and they’ve almost certainly adopted the same personality-first parasocial strategies pioneered by Formula 1. 
+    </p>
+    <p id="conclusion">
+        F1 struck the immensely difficult duality of a sport that feels simultaneously both fresh and established. Whether the sport can maintain its monumental growth in the coming years or not, what will undoubtedly endure is the way it fundamentally changed the way sports is consumed and promoted. 
+    </p>
+
+</body>
+</html>

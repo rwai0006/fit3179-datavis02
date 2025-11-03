@@ -1,0 +1,19 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "background":"transparent",
+  "data": {"url": "data/02_RaceAttendance.json"},
+  "mark": "rect",
+  "encoding": {
+    "y": {"field": "Race", "type": "nominal"},
+    "x": {"field": "Year", "type": "ordinal"},
+    "color": {
+        "field": "Attendance",
+        "type": "quantitative",
+        "scale":{"type":"threshold","domain":[0,50000,100000,150000,200000,250000,300000,350000,400000,450000,500000],"scheme":"reds"},
+        "legend":{"orient": "bottom","titleColor":"white","titleFont":"formula1-regular","labelColor":"white","labelFont":"titillium-regular"}
+    }
+  },
+  "config": {
+    "axis": {"grid": true, "tickBand": "extent","titleColor":"white","titleFont":"formula1-regular","labelColor":"white","labelFont":"formula1-regular","gridColor":"transparent","tickColor":"transparent"}
+  }
+}

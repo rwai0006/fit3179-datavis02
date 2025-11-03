@@ -1,0 +1,44 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "background": "transparent",
+  "data": {
+    "url": "data/05_SocialFollowing.csv"
+  },
+
+  "mark": {
+    "type": "area",
+    "interpolate": "monotone",
+    "line": {
+      "color": "#e00700"
+    },
+    "color": {
+      "x1": 1,
+      "y1": 1,
+      "x2": 1,
+      "y2": 0,
+      "gradient": "linear",
+      "stops": [
+        {
+          "offset": 0,
+          "color": "transparent"
+        },
+        {
+          "offset": 1,
+          "color": "darkred"
+        }
+      ]
+    }
+  },
+  "encoding": {
+    "x": {
+      "field": "Year",
+      "type": "temporal"
+    },
+    "y": {
+      "field": "Total Social Following",
+      "type": "quantitative",
+      "title": "Totoal Following (Millions)"
+    }
+  },
+  "config": {"axis": {"titleColor":"white","titleFont":"formula1-regular","labelColor":"white","labelFont":"titillium-regular","gridColor":"dimgrey","tickColor":"dimgray"}}
+}

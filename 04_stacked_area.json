@@ -1,0 +1,23 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "width": 300, "height": 200,
+  "background":"transparent",
+  "data": {"url": "data/04_RevenueBreakdown.json"},
+  "mark": {"type":"area","interpolate":"monotone"},
+  "encoding": {
+    "x": {
+      "field": "year",
+      "type": "temporal",
+      "title":"Year"
+    },
+    "y": {
+      "aggregate": "sum", "field": "revenue_billions", "type": "quantitative", "title":"Revenue (Billion USD)"
+    },
+    "color": {
+      "field": "component",
+      "scale": {"range": ["#4d0300","#990500","#eb4d47","#f2908c"]},
+      "legend":{"orient": "bottom","title":"Revenue constituent", "titleColor":"white", "titleFont":"formula1-regular","labelColor":"white","labelFont":"titillium-regular"}
+    }
+  },
+  "config": {"axis": {"titleColor":"white","titleFont":"titillium-regular","labelColor":"white","labelFont":"titillium-regular","gridColor":"dimgray"}}
+}

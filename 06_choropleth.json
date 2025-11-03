@@ -1,0 +1,38 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+    "title": {"text":"Growth in US search interest since 2015", "color":"white", "font":"formula1-regular"},
+    "width": 400,
+    "height": 400,
+    "background": "transparent",
+    "projection": {"type": "albersUsa"},
+
+    "data": {
+        "url": "data/states-10m.json",
+        "format": {"type": "topojson", "feature": "states"}},
+    
+    "transform": [{
+        "lookup": "properties.name",
+        "from": {
+            "data": {"url": "data/06_USSearchInterest.csv"},
+            "key": "State",
+            "fields": ["2025_Growth"]}
+    }],
+
+    "mark": {"type": "geoshape"},
+
+    "encoding": {
+        "color": {
+            "field": "2025_Growth",
+            "type": "quantitative",
+            "scale": {
+                "type": "linear",
+                "domain":[60,360],
+                "range": ["#f7d5d4","#e00700","#4d0300"]},
+            "legend":{"orient":"bottom","labelOverlap":"greedy","gradientLength":200,"title":"Percentage growth since 2015 (%)", "titleColor":"white","titleFont":"formula1-regular","titleFontSize":8,"labelColor":"white", "labelFont":"titillium-regular"}
+        },
+            
+        "tooltip": [
+        {"field": "properties.name", "type": "nominal", "title": "Country"},
+        {"field": "2025_Growth", "type": "quantitative", "title": "Growth"}]
+        }
+}

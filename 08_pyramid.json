@@ -1,0 +1,67 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "data": { "url": "data/08_GenderComposition.json"},
+  "transform": [
+    {"calculate": "datum.sex == 2 ? 'Female' : 'Male'", "as": "gender"}
+  ],
+  "spacing": 0,
+  "hconcat": [{
+    "transform": [{
+      "filter": {"field": "gender", "equal": "Female"}
+    }],
+    "title": "Female",
+    "mark": "bar",
+    "encoding": {
+      "y": {
+        "field": "years", "axis": null, "sort": "descending"
+      },
+      "x": {
+        "field": "percentage",
+        "title": "population",
+        "axis": {"format": "s"},
+        "sort": "descending"
+      },
+      "color": {
+        "field": "gender",
+        "scale": {"range": ["#675193", "#ca8861"]},
+        "legend": null
+      }
+    }
+  }, {
+    "width": 20,
+    "view": {"stroke": null},
+    "mark": {
+      "type": "text",
+      "align": "center"
+    },
+    "encoding": {
+      "y": {"field": "years", "type": "ordinal", "axis": null, "sort": "descending"},
+      "text": {"field": "years", "type": "nominal"}
+    }
+  }, {
+    "transform": [{
+      "filter": {"field": "gender", "equal": "Male"}
+    }],
+    "title": "Male",
+    "mark": "bar",
+    "encoding": {
+      "y": {
+        "field": "years", "title": null,
+        "axis": null, "sort": "descending"
+      },
+      "x": {
+        "field": "percentage",
+        "title": "population",
+        "axis": {"format": "s"}
+      },
+      "color": {
+        "field": "gender",
+        "legend": null
+      }
+    }
+  }],
+  "config": {
+    "view": {"stroke": null},
+    "axis": {"grid": false}
+  }
+}
